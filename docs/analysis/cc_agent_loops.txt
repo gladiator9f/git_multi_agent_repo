@@ -1,0 +1,334 @@
+And honestly, cloud code didn't work very well for, you know, the first six months. It it actually it took time. It took time to catch up. And it wasn't until I would say Opus 4 in May of 2025.
+0:1313 secondsHere at Anthropic, we've seen an 8x increase [music] in code output per engineer. And this is just unheard of in the industry. Like, you know, typically
+0:2222 seconds[music] companies see something like a few% a year. Quad building bigger and bigger things. So, it won't just be [music] features, it's going to be products. Every time it didn't work, I
+0:3030 secondslearned a lot. And every time I did a startup, I wore a different hat. It was sometimes engineering, sometimes business, sometimes product, sometimes
+0:3838 secondsdesign, you know, you know, you know, like at a at a small company, sometimes you have to do all this stuff. And so from from kind of the beginnings of my
+0:4646 secondscareer, I kind of felt this need to break down the walls of, you know, engineers do this and designers do this.
+0:5555 secondsAnd um at some point I you know I did a bunch of different startups. I worked in VC for a little bit. Then I ended up at Meta for for a little while.
+1:031 minute, 3 secondsAnd um something that I've I've always done as I built products is I built developer tools so that I can build
+1:121 minute, 12 secondsbetter products. Because there's this sort of intuition that if you have an idea and you want to build it, the easier it is to use your tool, the
+1:201 minute, 20 secondsbetter you can build it. Imagine if you're, you know, a carpenter and, you know, like hammers are really badly designed. Let's say it takes like, you know, let's say it takes like three
+1:281 minute, 28 secondspeople to hold a hammer to hammer a nail. You're going to hammer a lot less often. Yeah.
+1:321 minute, 32 secondsBut if you have like a really well-designed hammer and it's very easy to use and you enjoy using it, then you're going to hammer a lot of nails.
+1:381 minute, 38 secondsAnd so, you know, like when when I build product, I love to build the developer tools that make it even easier to build the product.
+1:441 minute, 44 secondsAnd the thing that matters is not the tool. The thing that matters is the end result of the product.
+1:481 minute, 48 secondsAnd so, this is the, you know, this is the mindset that I took to Meta. This is the mindset that I that I brought to Anthropic. You know, at Anthropic, the thing that matters more than anything is
+1:561 minute, 56 secondsthe safety mission. This is the thing that brought me there. This is I think that just the most important problem to work on. And you know, my role at
+2:032 minutes, 3 secondsAnthropic is to build the tools that let people experience the models so they can understand where this thing is headed.
+2:112 minutes, 11 secondsAnd that lets us make it a little more safe and a little more capable and hopefully a little more delightful to to use.
+2:182 minutes, 18 secondsWell, I tell you, I love hearing that.
+2:202 minutes, 20 secondsThere's there's a bit of Malcolm Gladwell in your in your story of the art because you look at what you've done
+2:272 minutes, 27 secondsand you you probably couldn't have done it without that myriad of experiences. I'm I'm very fortunate in chip design.
+2:332 minutes, 33 secondsAnd I've had a chance to be in super small teams where we had to do really every aspect of chip design and and I feel so fortunate because over my career
+2:422 minutes, 42 secondsit gave me a perspective of how all the myriad of pieces have to come together and you were so hands-on in the myriad
+2:492 minutes, 49 secondsof roles uh and you think about how inanthropic you're having to put it all together to enable people to have that
+2:562 minutes, 56 secondsend result and to have it be safe. All right.
+3:003 minutesYeah. Absolutely. And you know like when we hire for the team, these are the kind of people I look for too. Like I I I typically don't look for a person that you know has a computer science
+3:083 minutes, 8 secondseducation and then you know like worked in you know big big tech for for whatever. I like I love people with non-traditional backgrounds. I love
+3:153 minutes, 15 secondspeople with all sorts of different experiences cuz the more that you've seen the more different ways you've approached problems the more you can bring to this problem.
+3:233 minutes, 23 secondsYeah. You have a passion for what you do and I assume you look for that in the people you're hiring as well.
+3:293 minutes, 29 secondsYeah. Yeah. And I love people that are passionate not just about their work but about other stuff too. So like I love people with like you know side projects
+3:383 minutes, 38 secondsand hobbies and just like if someone has like an amazing personal website uh and also does you know leather working on the weekend and they've gotten to a
+3:463 minutes, 46 secondspoint where they do it at like a very high level that's a really good sign this is a person that's going to perform well on the job too.
+3:523 minutes, 52 secondsI would just love to explore a little bit of how all of that background and you jumped in uh with anthropic. Could
+3:593 minutes, 59 secondsyou have imagined when you uh started just thinking like hey we could do really a code assist and autocomplete or
+4:074 minutes, 7 secondsor or or you know just really helping code segments. Uh tell me when you started to realize that you could progress from there uh to really these
+4:164 minutes, 16 secondsagentic processes that now um are are significantly uh advancing code to where where
+4:244 minutes, 24 secondsbasically everyone's saying look this we're not co we're using uh coding agents we're not coding in the
+4:314 minutes, 31 secondstraditional way which means it's it's now we've fundamentally transformed software development and it's all happened in a period of months months.
+4:414 minutes, 41 secondsHow you know did you imagine that?
+4:444 minutes, 44 secondsNo. [laughter] No.
+4:484 minutes, 48 secondsWhen when I joined Anthropic, the model at the time was sauna 3.5. And that's the first model that I think broke through the mainstream.
+4:554 minutes, 55 secondsAnd it made people realize that, oh man, maybe there's something to this idea of a general model that if you apply it to a particular problem like coding, yeah, it can be really good.
+5:045 minutes, 4 secondsAnd um you know, like philanthropic, this has just always been the research direction. like we we have always been focused on uh safety and uh uh security
+5:145 minutes, 14 secondsand enterprise and coding. It's just always been this laser focus and we wanted to build these models for a
+5:225 minutes, 22 secondslong time. The reason we want a good coding model is because the model exists as software. And as it gets more intelligent, the way it interacts with
+5:295 minutes, 29 secondsthe world is through software. And so you want the code that it writes to be good so that it can interact well so that we can study it and we can make it
+5:365 minutes, 36 secondssafer and better aligned. And so you know for a while for anthropic we knew we wanted to build some kind of coding product. And my job was to figure out what's that product.
+5:455 minutes, 45 secondsYeah. And when I joined again it was it was Sona 3.5 and all the products at the time they were fancy autocomplete
+5:535 minutes, 53 secondsand you know at the time this was cutting edge and I remember my first time you know using some of these products and it was just amazing. Um and
+6:016 minutes, 1 secondwe felt that very soon the models are going to get to a point where they're going to be much more capable than this.
+6:086 minutes, 8 secondsSo for coding it's not a matter of completing a single line. the model is going to be able to write an entire function, an entire file, an entire
+6:156 minutes, 15 secondsfeature, an entire project. Now, I think by the end of this year, they're going to be able to build entire businesses.
+6:206 minutes, 20 secondsAnd so, you know, we we kind of saw this uh you know, we call this the exponential and this is just the way that, you know, the models are developing.
+6:286 minutes, 28 secondsThere's these scaling laws that describe the way that model intelligence goes up over time.
+6:336 minutes, 33 secondsSomehow the laws are continuing and in fact it's accelerating and you know, it's an empirical kind of observation.
+6:406 minutes, 40 secondsIt's not obvious why it keeps happening, but it seems to keep happening. And so all we did is we kind of traced the line and we're like, "All right, right now the model is here. It's going to get
+6:476 minutes, 47 secondshere. The product that's here is not going to be enough to let people experience the power of the model." And so we wanted something that was purely agentic.
+6:576 minutes, 57 secondsAnd honestly, quad code didn't work very well for, you know, the first six months. It it actually it took time. It
+7:047 minutes, 4 secondstook time to catch up. And it wasn't until I would say Opus 4 in May of 2025. Yeah.
+7:117 minutes, 11 secondsWhere it really started to work. And you know like since then the grow the growth for you know the product has been exponential also. It was not at first but that's when it became exponential.
+7:217 minutes, 21 secondsYeah.
+7:217 minutes, 21 secondsAnd um we've been finding more and more ways to to use this like as the model gets more sophisticated we figure out more ways to unlock it in the product.
+7:297 minutes, 29 secondsWe launched quad tag and this is kind of the latest iteration of this.
+7:347 minutes, 34 secondslongunning asynchronous agent that you interact with like a co-orker. It has great common sense. It has a great sense of when to jump in and when not to. And you know, this will just keep happening.
+7:447 minutes, 44 secondsWe're going to keep disrupting ourselves. So, we're going to keep figuring out what is what's the next form factor. You know, you talk about sort of predicting this this uh this
+7:537 minutes, 53 secondsline of progress, but to me uh how did you how did you uh think about architecting,
+8:008 minutesyou know, really multi- aents and how uh running these multiple agents can actually have us rethink how we
+8:098 minutes, 9 secondsimplement our workflows. I mean that that to is what been shocking to me is we actually have the opportunity to
+8:168 minutes, 16 secondsrearchitect re-engineer how all of us are getting our work done. And I I have
+8:228 minutes, 22 secondsto wonder did this was that architected uh into your development or is that sort
+8:308 minutes, 30 secondsof just a natural outcome of the capabilities that you were developing?
+8:348 minutes, 34 secondsI think it's a little bit of both. If I think back a couple years, how did how did we use models? we you know like they did this like oneline autocomplete and
+8:428 minutes, 42 secondsand we had agentic workflows at least what we called agentic workflows but it was essentially these deterministic systems where a step at a time might call out to an LM to do some bit of
+8:518 minutes, 51 secondscomputation but fundamentally the workflow was deterministic and I I think what's changed as the model got more intelligent is we've realized actually
+9:009 minutesit's much better to use the model as the coordinator for this workflow and so what you do is the model drives and you
+9:079 minutes, 7 secondsgive it tools to pull in context Next, you give it tools to interact with the outside world. You ask it to do something and then you let it figure out
+9:149 minutes, 14 secondshow to orchestrate this. You no longer tell it, okay, you do step one, then step two, and then if not two, then you know this, and then else this. And it it's just not how it works anymore.
+9:249 minutes, 24 secondsYou give it a goal, you give it the starting point, you give it access to tools, and then it will figure it out.
+9:309 minutes, 30 secondsAnd this has happened, I think, as models got more intelligent. This is just overwhelmingly the reason. But I I I think like within quad code, we've
+9:389 minutes, 38 secondsalso learned this. At the very beginning, we would kind of spoon feed the model context.
+9:439 minutes, 43 secondsAnd then as the model got more sophisticated, we realized, okay, maybe actually this isn't it. And we moved away from that a little bit. And you know, like for example, we have this
+9:519 minutes, 51 secondslike file called claw.md. It's loaded for every session. And I think more and more what we're seeing with customers is they're actually moving more to skills
+9:599 minutes, 59 secondsand [clears throat] they're moving more to tools and more to MCPs because this way the model has a little bit more control over how to load this in.
+10:0710 minutes, 7 secondsWell, I have to uh ask I mean you guys across Antropic are using cloud every day. I mean so you're you're customer
+10:1510 minutes, 15 secondsnumber one like before the rest of us see it uh you know you're you're making sure it it accomplishes what you need.
+10:2210 minutes, 22 secondsTell tell us about your your typical day. I mean, it is it is it is is Claude
+10:2910 minutes, 29 secondslike an extension of your of your body as you're as you're creating your work output?
+10:3510 minutes, 35 secondsYeah, this is this is sort of the weird thing about how anthropic works at Anthropic. Claude is at the center of everything that we do.
+10:4110 minutes, 41 secondsIt's every single business process, every single bit of everything everyone does throughout the day, quad is just at the center of it. Um, a way I sometimes
+10:4910 minutes, 49 secondsdescribe it is, um, let's say you're a new hireer and you're onboarding at Anthropic.
+10:5510 minutes, 55 secondsTypically, if you have a question like, uh, you know, where's the office?
+10:5810 minutes, 58 secondsWhere's the address? You know, like at, you know, most companies, you would go and search a wiki or you would ask a coworker at Anthropic, you ask Quad. If
+11:0611 minutes, 6 secondsyou have a question like where's the codebase and how do I get access to it?
+11:1011 minutes, 10 secondsAgain, you don't go to wiki, you go to quad and you ask quad. If your question's like, you know, like I took a trip, I have an expensor for it. how do
+11:1611 minutes, 16 secondsI file that expense report? And this is how it begins.
+11:2111 minutes, 21 secondsBut then as you kind of get deeper into the work, Claude remains at the center of everything. Yeah.
+11:2511 minutes, 25 secondsAnd so, you know, Claude writes the code. Uh it does the the code review. It does the security review. Um it brainstorms and comes up come comes up
+11:3411 minutes, 34 secondswith new product ideas. It aggregates user feedback. It triages incidents.
+11:4011 minutes, 40 secondsEvery single part of the engineering SDLC cloud is at the center of it too.
+11:4411 minutes, 44 secondsYes. And you know like now now this is happening not just for engineering it's happening for product and for design and for marketing and for GTM for every
+11:5111 minutes, 51 secondsfunction. This is what we're seeing and the tools look a little different.
+11:5411 minutes, 54 secondsIt might not be you know quad code in a in a terminal. It might be you know a tool like co-work instead.
+12:0012 minutesUm but it's still quad at the at the center.
+12:0212 minutes, 2 secondsAnd I think this is actually what I see with the most successful adopters of of quad is you put it just at the center of every process.
+12:1112 minutes, 11 secondsWe we were talking a little bit before about uh my my favorite Harvard Business Review article from like from the '90s and it it was talking about like I think it was like '92 or '96 or something and
+12:2012 minutes, 20 secondsit was it was titled something like computers are here why are we not seeing the productivity benefits and you know like this was a big question that people
+12:2812 minutes, 28 secondswere debating and essentially the case the article made was that there were two kinds of companies. There was one kind of company that they took a computer and
+12:3612 minutes, 36 secondsthey put it somewhere in the corner of the office and then they kept all their, you know, paper and pen processes and all their filing cabinets and everything stayed as is. But now there's a computer
+12:4412 minutes, 44 secondsin the corner. These companies are not seeing a productivity improvement. And then there's the companies that took the paper, you know, the the filing cabinet
+12:5212 minutes, 52 secondsand threw it away. They took the paper and pen and burned it.
+12:5512 minutes, 55 secondsAnd now there's a computer at the center of every process. And those are the companies that unlock productivity improvements. And you know since the beginning of this year at Anthropic,
+13:0213 minutes, 2 secondswe've seen an 8x increase in code output per engineer. Mhm.
+13:0713 minutes, 7 secondsAnd [clears throat] this is just unheard of in the industry like you know typically companies see something like a few% a year. And you know now our biggest customers that are using cloud
+13:1513 minutes, 15 secondscode now they're starting to see something like this. They're seeing like you know 50 100% 150% improvement. And the thing that we did to get to the, you
+13:2313 minutes, 23 secondsknow, the 8x is we systematically improve a bottleneck at a time.
+13:3113 minutes, 31 secondsSo, you know, first coding is the bottleneck. We we throw quad at it and quad does the coding.
+13:3613 minutes, 36 secondsThe next bottleneck is the code review and, you know, then we have quad do that.
+13:4013 minutes, 40 secondsUm, the next bottleneck is, you know, like generating materials for GTM. You know, maybe we throw quad at that.
+13:4613 minutes, 46 secondsAnd so, just like one step at a time, we unbott every part of the process. Well, what I love that is because you're driving your development by your own
+13:5413 minutes, 54 secondsreal world needs. It's it's a self-reinforcing cycle uh to make sure that that of the value of where you're
+14:0214 minutes, 2 secondsspending your your resources. You're an AI native company, so you're you're adopting that change at an astonishing
+14:1014 minutes, 10 secondsrate. But I'd love to hear your experience of how you think about the role of of leaders, of engineers. I just
+14:1814 minutes, 18 secondsthink you're ahead of most of the rest of us and starting to see that at play uh and seeing how you're you're taking people with you.
+14:2914 minutes, 29 secondsStepping back a little bit, engineering is this thing that it's just always been changing. And you know, as engineers,
+14:3614 minutes, 36 secondswe're no strangers to this. You know, my my grandfather actually programmed punch cards in the in the Soviet Union. Um,
+14:4414 minutes, 44 secondsyou know, like I I grew up I I programmed like basic and assembly growing up and then, you know, I kind of learned higher level languages like as as I went. I I worked in JavaScript for
+14:5214 minutes, 52 secondsa while and in JavaScript every every engineer knows the frameworks change like every month there's a new set of frameworks and everyone has to learn new skills and so so I think like for for
+15:0115 minutes, 1 secondengineers the it's always been changing the languages have always been changing the frameworks have always been changing what's happening now is it's accelerating
+15:0915 minutes, 9 secondsand so we went up a level of abstraction we went from you know hardware to punch cards then we went from punch cards to source code now we went from
+15:1615 minutes, 16 secondsmanipulating source code to agents and now we're going up a level again from managing agents to managing like loops
+15:2315 minutes, 23 secondsand routines. And the crazy thing is that these last two steps happened in the span of two years. It's just it's faster than than it was before. And I think it'll continue to accelerate.
+15:3415 minutes, 34 secondsAnd so when it when I think about the engineers and the the people that are really successful, I think it's people that are empirical and and curious. So
+15:4315 minutes, 43 secondsyou're able to look at the data and you're able to adjust the approach. You don't always assume the same thing they always do is going to keep working.
+15:4915 minutes, 49 secondsyou're able to kind of take feedback from your work and so if there's new data you can have a different approach.
+15:5515 minutes, 55 secondsUm it's people that are autonomous because as engineering is no longer the bottleneck now we're actually
+16:0216 minutes, 2 secondsbottlenecked on the speed with which we can generate good ideas and bring them to market and you know do so safely. And the people that are really effective at
+16:1116 minutes, 11 secondsthis, they're not people that, you know, like they have to have this big process for how to get an idea to market and they need to collaborate with like 10 other teams to do it. They're sort of
+16:2016 minutes, 20 secondslike one person armies. It's like the the people that are most effective are this kind of like CEO archetype. Like you're you're able to come up with an
+16:2716 minutes, 27 secondsidea, you're able to talk to users, you're able to look at the data to build, to iterate, and to to bring it to the market.
+16:3316 minutes, 33 secondsAnd we actually see this coming not just from engineers, but from all sorts of functions. Mhm.
+16:3716 minutes, 37 secondsUm I think I think having this engineering background helps today, but it's actually I don't I don't think it's really essential anymore to to doing
+16:4416 minutes, 44 secondsthis kind of thing, but it does change the kind of skills that we need to emphasize. You need to
+16:5116 minutes, 51 secondsbe adaptable. You need to be uh fearless of change. I love what you said. You you have to be curious. You have to, you
+16:5916 minutes, 59 secondsknow, really be experimenting. I mean that's part of what I think this these new agentic workflows uh new meaning you
+17:0717 minutes, 7 secondsknow like like we've we've said Lily in the last uh you know 7 months to a year it changes how you can iterate. So how how do you be curious? You can
+17:1517 minutes, 15 secondsexperiment now in ways you could never experiment before. I mean your learning cycles are vastly accelerated aren't they?
+17:2317 minutes, 23 secondsYeah. Totally. Totally. And and I think it's on you know it's on leaders to make space. If you don't adjust for this and you don't create space, everyone's going to keep doing it the old way and you
+17:3117 minutes, 31 secondsgonna have to force everyone to do it the new way. Yeah.
+17:3317 minutes, 33 secondsBut really, for a lot of people, it's actually just really exciting to get to try all these tools, to get to experiment.
+17:3817 minutes, 38 secondsAnd so, I actually see a lot of my role as creating space for people to try stuff out, to feel safe doing it. You know, they're not going to get a bad
+17:4617 minutes, 46 secondsperformance review if they, you know, experiment with a new idea because it might actually work.
+17:5017 minutes, 50 secondsUm, and my other job is to just give people context. Yeah.
+17:5517 minutes, 55 secondsSo, to give them business context, product context. so that they can make better decisions.
+17:5917 minutes, 59 secondsBut companies that aren't AI native, uh these are lessons like what you went through that it's going to it's going to take uh showing best practice. It's
+18:0818 minutes, 8 secondsgoing to be, you know, educating the the workforce and and really driving culture change to be as you described.
+18:1418 minutes, 14 secondsYeah. Yeah, that's right. And and our job is to to help companies along the way. You know, like one thing that I've seen companies go through is this kind
+18:2118 minutes, 21 secondsof natural transition from not using AI to, you know, every engineer running one agent to every engineer running 10 agents,
+18:2918 minutes, 29 secondsthen a 100 agents, then a thousand agents. And there there's sort of these like traits that go with each of these.
+18:3618 minutes, 36 secondsSo, you know, with one agent, uh, engineers are using this agent to kind of like write the code and you're kind of focused on it. You're still kind of singlethreaded. You're working on one
+18:4518 minutes, 45 secondstask. Then at some point you kind of get to the point where you kind of trust the agent and you're like okay maybe maybe it's actually doing the right thing.
+18:5118 minutes, 51 secondsMaybe while it works I can start a second one. Yeah.
+18:5318 minutes, 53 secondsAnd engineers kind of naturally figure this out like maybe you'll have like multiple checkouts of the same repository or you know multiple views of the same code. So while the agent works
+19:0219 minutes, 2 secondsyou can uh you know work on something else and maybe you can scale up to like 10 agents. This way what you're doing is you're essentially roundroining through the agents. You start the work in one
+19:0919 minutes, 9 secondsyou move on to the second you you do the work there you move on to the third. And this is kind of the workflow that we've now support really well in uh the the
+19:1719 minutes, 17 secondsdesktop app. Um so both for quad code and for co-work you start a session you just start a second session you can you can move on you can have multiple stuff
+19:2519 minutes, 25 secondsrunning in parallel but then it gets really interesting once you scale this up a little bit more and I I think like when I look at most companies they're still somewhere between step one and two.
+19:3319 minutes, 33 secondsYes.
+19:3419 minutes, 34 secondsAnd uh when I look at anthropic we're probably somewhere around step three on average. So most engineers are running dozens or hundreds of agents
+19:4219 minutes, 42 secondsand um the way you do this is you have the agent run another agent and we have a lot of tools for this. Um so for example
+19:4919 minutes, 49 secondsif you're sub agents so you have agents running basically sub aents. Is that how you think about it or we've coined that phrase if if I don't know if it's industry standard.
+19:5819 minutes, 58 secondsNo no that's exactly it. So you have the sub aents and the sub aents can start sub agents. So it can it can actually go quite deep and for cloud code we support up to five layers now
+20:0620 minutes, 6 secondsof this kind of nesting and there's different ways to support this on the product side. So you know we've been experimenting with for example cloud execution. So instead of
+20:1420 minutes, 14 secondsthe agent running locally on your computer it runs in the cloud and uh you can start an agent from the desktop app or from the mobile app and I actually do a lot of my coding from my phone now.
+20:2520 minutes, 25 secondsI love that.
+20:2620 minutes, 26 secondsAnd it just runs in the cloud and this is actually what lets you scale up. And then you know we we we're we're continuing to iterate on this to make it even more native and to scale up to
+20:3420 minutes, 34 secondsthousands of agents. And the way we get there is with dynamic workflows and this is essentially using cloud to orchestrate just very large teams of
+20:4220 minutes, 42 secondsagents to do the most complex work like large codebased migrations like I think stripe just used this to migrate um it
+20:5020 minutes, 50 secondswas something like like it would have taken months and then it took like 4 days to do like a 10,000 line uh Scala to Java migration. Um there's a lot of
+20:5720 minutes, 57 secondscompanies that are using this for large migrations like we just migrated bun from Zigg to Rust and this is like a JavaScript runtime. It's a lot of code
+21:0621 minutes, 6 secondsand um so for the for these kind of like very very big workflows that would have taken weeks or months or years essentially a way to do it is this
+21:1321 minutes, 13 secondsdivide and conquer where you give the model a lot of agents and you just tell it like go figure it out do this big task. So it goes back to what we said
+21:2121 minutes, 21 secondsearlier. It uh it's going to be a journey. It's going to take uh it's going to take education uh and it is
+21:2921 minutes, 29 secondsgoing to take culture change and uh when you do it right uh we actually have similar examples of what you just described. We have uh we we have uh
+21:3921 minutes, 39 secondscreated a rustbased uh application. Our lead of AI software development did it over a weekend uh for an application
+21:4621 minutes, 46 secondsthat we needed. uh we were we we thought it would be a competitive gap uh and and over a weekend now we had to validate it and get it through all the you know the
+21:5521 minutes, 55 secondstest regressions and everything where it could be shipped but that just is was unheard of before. I mean uh it it's
+22:0322 minutes, 3 secondsjust astonishing to me uh what multi- aents can do. Again, you go back to this projection you had. It sounds like
+22:1222 minutes, 12 secondsthat's this is exactly what you expected though. Yeah.
+22:1522 minutes, 15 secondsRight. I think this is this was what we expect. Yeah. You know, you never you never know exactly how it's going to scale, but if you know, for some reason,
+22:2222 minutes, 22 secondsyou know, this is uh this is continuing and you know, like for for these traditional scaling laws and it it it's funny the the people that wrote the
+22:3022 minutes, 30 secondsscaling was paper like the first few authors like went and started anthropic because I think they knew where it was going. They know that safety becomes very important, security becomes very
+22:3822 minutes, 38 secondsimportant. Um and so you know traditionally the the scaling law was say that we scale as a function of the the size of the network, the amount of
+22:4622 minutes, 46 secondsdata and the amount of compute. And what we're seeing now is it's also a function of the test time compute. And you know like essentially it's a fancy way of saying how many tokens you throw at it.
+22:5622 minutes, 56 secondsAnd so from a product design point of view and kind of model training point of view, we want to make it so you can more productively throw more tokens at a
+23:0323 minutes, 3 secondsproblem to get a better result because if you do it naively, you spend more tokens but you don't get a better result. And so like one one example of this is effort levels. So like in the
+23:1123 minutes, 11 secondsmodel you can configure the effort. The higher the effort, the more the maximum amount of tokens the model will be willing to spend on that problem. And so this idea of like multi- aent and
+23:2023 minutes, 20 secondsdynamic workflows, I actually see it as another version of test time compute.
+23:2423 minutes, 24 secondsYou throw more tokens at it and by orchestrating the agents and having the model orchestrate it, you can use these tokens productively to to get a better
+23:3123 minutes, 31 secondsresult. And Boris, I've heard you uh state that it's really important to throw those tokens at it because otherwise you don't even know the roof
+23:3923 minutes, 39 secondsline of what you can achieve. Maybe you can share with our our audience what what you mean by that.
+23:4523 minutes, 45 secondsYeah. So I I think there's a lot of companies right now that are thinking about uh ROI and and how you measure this. And I
+23:5323 minutes, 53 secondsthink some companies are actually thinking about it wrong because they're focused purely on the I part of it. And so they think about okay, here's my investment. How do I reduce it? How do I
+24:0124 minutes, 1 secondcost cut? Obviously, this is important and you should just do this. And you know, there's a bunch of tools for this.
+24:0624 minutes, 6 secondsYou can use uh opus plan mode. You can use advisor models. You can use a lower effort setting. You can use a cheaper model. So maybe everything doesn't need
+24:1424 minutes, 14 secondsopus or you know maybe you can use haiku. Maybe you can use sonnet. And of course you like you write evals to kind of figure this out. But I think actually
+24:2124 minutes, 21 secondsthe far more important part is the r. So how do you improve the return that you're seeing from models? And and I
+24:2924 minutes, 29 secondsthink the biggest lesson here that we've seen from successful customers is you want to give engineers the freedom to experiment. You want to give everyone
+24:3624 minutes, 36 secondsthe freedom to experiment so that they come up with new use cases. You want people to experiment and you want to create this culture where people feel safe experimenting and they will surprise you.
+24:4424 minutes, 44 secondsYeah.
+24:4524 minutes, 45 secondsIt's not going to be your most senior engineer that comes up with like some brilliant idea. It's going to be maybe a new grad. You know, it's not going to be some engineer that figures out how do
+24:5224 minutes, 52 secondsyou automate this marketing process. It might be a marketing person somewhere in the corner of the org that you've never met but that comes up with a brilliant idea and they're because they're experimenting. And so the thing you want
+25:0125 minutes, 1 secondto encourage up front is this experimentation. If there's an internal use case and it takes off or there's a product and it takes off and it uses a lot of tokens but it's successful that's
+25:1025 minutes, 10 secondswhen you go in and you want to optimize it. But if you don't do the first part you'll never find opportunity. And um then once you find opportunity then then
+25:1825 minutes, 18 secondsyou can optimize it like any other engineering pump. Boris, I love that description because you what you also highlighted is there's a democratization
+25:2825 minutes, 28 secondsof opportunity. We've actually had junior engineers uh take a problem, a chip design problem that was was a bug.
+25:3525 minutes, 35 secondsUh we had an engineering team had been working for weeks couldn't solve the bug and one of our junior engineers said I I think I can solve that. uh threw a set
+25:4425 minutes, 44 secondsof agentic processes at it and came and solved this incredibly you know remote you know 20 things at once had to occur
+25:5325 minutes, 53 secondsfor this uh chip bug to to realize itself. This was obviously before we shipped a product. This was in our our debug and test phase. It actually
+26:0026 minutesshocked to the core a number of our senior engineers and and that actually drove up adoption [laughter] of these
+26:0726 minutes, 7 secondsapproaches at AMD because every time you actually have to experience it uh you you can talk you can give it lip service
+26:1526 minutes, 15 secondsbut once you actually have a problem that you couldn't solve or uh or actually experience a huge productivity
+26:2226 minutes, 22 secondsgain I just leader after leader I see them immediately converted on the spot to believers.
+26:2926 minutes, 29 secondsThat's right. That's right. And you need a certain amount of humility also going in. Like I think this is a lesson I I had to learn like over and over and over
+26:3626 minutes, 36 secondsagain. I tried to do things my way which was, you know, before I just kind of gave up and like let Quad drive. I I kind of had to I I I manually did it.
+26:4626 minutes, 46 secondsAnd you know, for example, maybe this is like a year ago, it was like debugging a a bug also. And um I remember there was like one time I was debugging something
+26:5426 minutes, 54 secondsand there was a new person that just joined the team and I was debugging it by hand. that was running a you know a profile to figure out what's going on and they just you know asked Quad to do
+27:0227 minutes, 2 secondsthe same thing and I was like no no no there's no way Quad won't be able to figure it out.
+27:0627 minutes, 6 secondsEven you said that even I even I said that because you know in some ways like I'm biased because I've worked with Quad through all the model generations and so somewhere in my
+27:1527 minutes, 15 secondshead I was still stuck on this like older model generation which is just not where the capability was at that point because the model was improving.
+27:2227 minutes, 22 secondsUm and within 20 minutes they came up with a solution and I didn't. Wow. and they they had the right one.
+27:2827 minutes, 28 secondsAnd I've just, you know, learned this lesson over and over. And I think it's like as the model gets more advanced, my relationship with the model changes. And
+27:3627 minutes, 36 secondsit's less that like I have to handhold it and I have to micromanage it. And it becomes more like working with a senior engineer. I I trust them. I give them context. I give them goals. I check in.
+27:4627 minutes, 46 secondsThe, you know, the less I trust them, maybe the newer they are to the problem, the more often I check in.
+27:5027 minutes, 50 secondsUm, but really it's about setting the right guard rails and then letting the model do the work.
+27:5527 minutes, 55 secondsBoris, I have a question for you. I mean it is a democratization of what teams can do. And so what what we also see is
+28:0228 minutes, 2 secondsthat um people will be running in parallel and we're going to have five ways to drive a you know a improvement
+28:1228 minutes, 12 secondsout of a workflow. How do you think about that? How do you think about measuring and you know and how um you know how how do you at Enthropic and in
+28:2028 minutes, 20 secondsthose cases you know pick the solution to go with? I mean you what's the role of like benchmarking and measuring uh to
+28:2728 minutes, 27 secondsbe able to in this agentic area make these decisions and and not end up with uh this you know just massive
+28:3428 minutes, 34 secondsbifurcation of of approaches you know as we all are are trying to solve problems. Yeah. So I think it's exactly this.
+28:4128 minutes, 41 secondsThere's there's actually two tools. One is EVEL's so benchmarks. So then one is Vibes and I think both have their place.
+28:4928 minutes, 49 secondsUm for something like a workflow that you're going to repeat maybe thousands, tens of thousands, hundreds of thousands, millions of times, you definitely want to have evals because
+28:5728 minutes, 57 secondsthe eval measure, let's say a new model comes out, you swap it in in the harness and you want to make sure that it improves. Um and this gives you a way to
+29:0529 minutes, 5 secondsmeasure it. for other things like maybe a product experience. Uh vibes actually go pretty far because there's a cost to writing evals. You don't want to write
+29:1229 minutes, 12 secondsit for everything. Um so you kind of want to like pick and choose when when can intuition when you use something when when when does that tell you something? And then when do you actually
+29:2029 minutes, 20 secondsneed eval to tell you something? And when you have this bifurcation and all these different products, I think one of the the blessings of uh you know like
+29:2829 minutes, 28 secondshaving having a model is it's actually very easy to migrate and merge code. And so like when you know you pick the approach that you want usually it's
+29:3629 minutes, 36 secondsquite easy to just ask cloud like hey like migrate all these other call sites to this you know workflow and you know that's that.
+29:4229 minutes, 42 secondsWell I'm going to shift gears yet again a little bit. I want to uh talk about something that that all of us have to focus on and and I think it's just
+29:5029 minutes, 50 secondsactually centered and anthropic in the approach you all have taken and that's uh the broad topic of trust and verification. Um I had on a previous
+29:5929 minutes, 59 secondsepisode Kathy Fam who who lectures at u at Harvard and we talked about uh uh you
+30:0630 minutes, 6 secondsknow governance and how you build in the process. So there's one side there's a governance of how to ensure there's safe AI and then there's the verification
+30:1430 minutes, 14 secondslike how do you ensure um that you're driving the accuracy that that you need because both both come together to
+30:2230 minutes, 22 secondsprovide trust and and the deployment of AI. I know it's important to you. You've said it from the outset in our in our
+30:3030 minutes, 30 secondschat here, but maybe we could just spend a minute um thinking about like how do you how do you build that in? Like is it
+30:3630 minutes, 36 secondsis it a a checklist or is it is it actually built in your your own workflows uh that you run every day?
+30:4530 minutes, 45 secondsYeah, I mean it's it's a it's many layers and exactly like you said for for anthropic this is just at the core of what we do. As models get increasingly
+30:5430 minutes, 54 secondspowerful and they get more and more central to the business process, you needed to be safe. You needed to be reliable. You needed to be trustworthy.
+31:0131 minutes, 1 secondYou needed to be aligned with uh whatever the intent is of of the person that's using the model. So, you know, there there's just like so many ways
+31:0931 minutes, 9 secondsthat that we approach this at different layers. The most basic is model alignment. And, you know, we have a very large team working on it. We publish a lot of research about it and we have a
+31:1831 minutes, 18 secondslot of blog posts about what we're learning. And this is just many many years of research go into this. And uh essentially like you know there there's
+31:2631 minutes, 26 secondsa lot of things that go into alignment but you know for example an element of alignment is uh truthfulness. So you know the model kind of says the right
+31:3331 minutes, 33 secondsthing. Another element is uh not being because a failure mode for models for example is agreeing with everything the
+31:4231 minutes, 42 secondsuser is saying but actually a a good model that I like working with will push back.
+31:4731 minutes, 47 secondsMhm. And I think with uh with some of our later models, so like Opus 4.7, definitely Opus 4.8, um we made a lot of
+31:5531 minutes, 55 secondsprogress in this. Um and so if we train kind of the model well, then if I suggest something and it's a bad idea,
+32:0332 minutes, 3 secondsthe model will push back and it makes me trust it a little bit more.
+32:0832 minutes, 8 secondsThere's other layers too. So you know, when we talk about trust, another element of this, you know, there's a lot of stuff wrapped into trust, but another element is uh security. And so this is
+32:1732 minutes, 17 secondsanother element that goes into training is for example anti-prompt injection training and on every model we publish there's a system card that talks about
+32:2532 minutes, 25 secondshow resilient is the model to common attacks like prompt injection and opus 4.7 op 4.8 aid fable. These are just the
+32:3532 minutes, 35 secondsleast prompt injectable models in the industry by margin of I think like five or 10x. It's it's like a really big margin.
+32:4132 minutes, 41 secondsSo you you had to architect that in I mean how did you do that?
+32:4532 minutes, 45 secondsThere there's a lot of training that goes into it. [clears throat] So you know this is this is just part of the model training process. Um and we we train the models to be resistant to
+32:5432 minutes, 54 secondsthese kind of attacks. And especially when you combine it with a runtime classifier for proper injection, which we actually also do, the success rate in
+33:0133 minutes, 1 secondpractice now is near zero. And obviously this is important because as the models do more, as they interact with more systems, being resistant to these very common attacks becomes very important.
+33:1233 minutes, 12 secondsAs the model gets more capable, we need a way to run the model for a longer period of time safely. And you know, now there's workloads that run for days,
+33:1933 minutes, 19 secondsweeks, months at a time. And obviously this means that there can't be a person sitting there. And around the same time, what we were realizing is if there's a
+33:2833 minutes, 28 secondsperson that's deciding yes or no every time, at some point the person actually just stops reading and they just say yes, yes, yes, because they're tired of
+33:3533 minutes, 35 secondspressing yes. And I noticed myself doing this, too. You know, I I I would kind of stop reading the bash commands. I would
+33:4233 minutes, 42 secondsjust say yes. And our security people were also realizing this. [laughter] Um and so they the thing that they started working on is is there a way to
+33:5133 minutes, 51 secondsroute this to a classifier so the classifier can decide and you know they started this work it took uh many months
+33:5833 minutes, 58 secondsto to kind of get this to a mature state and in the end through uh evals uh through red teaming through pentesting
+34:0534 minutes, 5 secondswe're able to show that this is actually much safer. Yeah.
+34:0834 minutes, 8 secondsAnd so you know at anthropic we run on auto mode and we we recommend this to all our customers too. Well, Boris, uh, I I I have to ask you, I mean, you you
+34:1634 minutes, 16 secondsyou're removing bottlenecks at at every stage, but how do you think about scale going forward? I mean, uh, the complexity of what you're taking on and
+34:2534 minutes, 25 secondsand on traffic is is it just, as you said, growing at at dramatically at every release. Um, how do you how do you
+34:3334 minutes, 33 secondsthink about managing scale uh actually maintaining that pace?
+34:3834 minutes, 38 secondsYeah. I I think a lot of it comes down to following the scaling laws and uh
+34:4434 minutes, 44 secondscontinuing to reinvent the product as it scales up. Um a lot of it is you know about finding awesome partners to work
+34:5234 minutes, 52 secondswith um to you know like support the scale and you know like support this kind of compute. Um and uh I I I I think
+35:0035 minutesa lot of it is uh figuring out the right guard rails so that we can make sure it's safe because you know like again as the model
+35:0835 minutes, 8 secondsbecomes more and more core to what we do um we have to make sure that it does the right thing. Yes.
+35:1235 minutes, 12 secondsBut I'm actually Mark I'm curious how you think about it. Like you're no stranger to scaling and you you've seen this through multiple generations for CPUs for GPUs.
+35:2035 minutes, 20 secondsYes.
+35:2135 minutes, 21 secondsHow how do you think about it? Well, scaling for us at AMD is is actually fundamental because the old Moore's law,
+35:2835 minutes, 28 secondsso Moore's law was that you could double the transistor density, double the performance, but stay at the same power
+35:3635 minutes, 36 secondsenvelope and cost envelope. And that that was fantastic for years, but Boris about 10 years ago that started trailing
+35:4335 minutes, 43 secondsoff. Not that we don't still with each new semiconductor node get you know more productivity and more uh density but the
+35:5135 minutes, 51 secondscosts are going up and as you've certainly seen the power goes up. Uh so we're having to reimagine how we
+35:5935 minutes, 59 secondsoptimize to be able to maintain we're basically needing to stay on the old Moors law pace without the physics of
+36:0736 minutes, 7 secondsthe semiconductor supporting that old Moors law pace. So um it's a huge challenge uh but we're up for it and
+36:1436 minutes, 14 secondsfrankly uh these agentic flows are proving immensely helpful to let us scale because they're helping us manage
+36:2236 minutes, 22 secondsat a bigger I'll call it state space more variables more of our chip designs that can be optimized
+36:2936 minutes, 29 secondsuh and I I don't think we could we could continue to scale without these agent workflows. I literally it's coming about
+36:3736 minutes, 37 secondsat the perfect time. It's like a perfect confluence uh to to enable us uh to continue to scale. Uh and you talked
+36:4636 minutes, 46 secondsabout partnership. I mean that's at the core of who we are at AMD like um you know our partnership with you, our partnership across the industry. That's
+36:5336 minutes, 53 secondsalso fundamentally fundamental for us to to be able to scale because we like to deeply partner um to make sure we are
+37:0137 minutes, 1 secondusing the best like just as the stories you've told us here. We want to be first adopters of of those best practices uh that that you're doing at at Anthropic.
+37:1037 minutes, 10 secondsSo uh great question uh for us at AMD for our whole chip industry paramount of
+37:1637 minutes, 16 secondsinnovating to keep uh at scale. I I have to ask the question. I mean you talked
+37:2237 minutes, 22 secondsabout uh really seeing us uh progress um uh on on kind of the line you projected.
+37:2937 minutes, 29 secondsSo I have to ask what do you see coming in the next uh you know uh two to three years which in AI time is like an
+37:3737 minutes, 37 secondseternity. [laughter] Two to three years is a really long time but it's maybe um I I'll think about maybe six months. Six months.
+37:4337 minutes, 43 secondsUm this is just otherwise my prediction is just going to be way off somewhere. Of course.
+37:4837 minutes, 48 secondsUm I think I think in six months um we are going to see agents running for longer on average. We're going to see people running more agents on average.
+37:5837 minutes, 58 secondswe're going to see them be better aligned with your intent. So it's going to be less course correction, less handholding. There's going to be a lot
+38:0638 minutes, 6 secondsmore autonomy. Um, so I think it'll actually become pretty normal for, you know, most people and definitely most engineers and hopefully more than that
+38:1338 minutes, 13 secondsto be running agents for, you know, like days or weeks at a time. This would just become a normal thing as opposed to something a few engineers are doing. Um,
+38:2138 minutes, 21 secondsI think by the end of this year, we're going to we're going to start to see Quad building bigger and bigger things.
+38:2638 minutes, 26 secondsSo it won't just be features, it's going to be products. We might start to see entire startups being built by Quad. Um,
+38:3438 minutes, 34 secondsso yeah, progress progress marches on and um, you know, we're excited to to to make it safe and to make it something that's delightful for for people to use.
+38:4538 minutes, 45 secondsBoris, um, thank you very much. Thanks for sharing your insights. Uh, thanks for your vision and the impact you're having on the industry. Uh, and my god, it's an exciting future. Thanks so much.
+38:5638 minutes, 56 secondsThank you, Mark.
+38:5838 minutes, 58 secondsI truly enjoyed chatting with Boris. I think Boris really gave us a preview of how work changes going forward in this agentic era of AI. A few takeaways
+39:0639 minutes, 6 seconds[music] that really stood out, the value of hiring people with non-traditional backgrounds to bring new perspectives
+39:1339 minutes, 13 secondsand passions. Also, how at Anthropic Claude is at the center of the employee experience. Gentic AI democratizes the
+39:2139 minutes, 21 secondsopportunity for anyone at any [music] level to make an impactful difference.
+39:2639 minutes, 26 secondsAnd lastly, when thinking about return on investment, don't just focus on the investment. Focus on the return. The
+39:3339 minutes, 33 secondsfreedom [music] of experimentation that provides will be what comes up with the biggest wins. Thank you for joining us today. I look forward to bringing
+39:4139 minutes, 41 seconds[music] you more in-depth conversations on the cutting edge of technology, industry insights, and visionary perspectives from some of the brightest
+39:5039 minutes, 50 secondsminds in the industry. You can [music] watch the video show on AMD's YouTube channel, or you can listen in audio only platforms, including [music] Spotify, Amazon Music, and YouTube Music.
+40:0140 minutes, 1 secondTechnology is always advancing, and I can't wait to share more insights with you next time.
+
+Sync to video time
