@@ -1,0 +1,21 @@
+Architecture: The Multi-Agent PR LifecycleA typical multi-agent Git setup partitions tasks to ensure specialized execution without overlapping file changes:[GitHub Issue / Ticket] 
+       ¦
+       ?
+ ?? Orchestrator Agent (Assigns tasks & divides scope)
+       ¦
+ +---------------------------+
+ ?                           ?
+?? Coding Agent A           ?? Coding Agent B   
+ ? Spawns isolated Git       ? Spawns isolated Git
+   worktree (Branch A)         worktree (Branch B)
+       ¦                           ¦
+       ?                           ?
+[Creates Pull Request]      [Creates Pull Request]
+       ¦                           ¦
+       +---------------------------+
+                     ?
+               ?? Reviewer Agent (Lints, security checks, tests code)
+                     ¦
+                     ?
+               ?? Triage/Merge Agent (Resolves merge order & pushes to main)
+?? Key Components for Implementation1. Isolation via Git WorktreesRunning multiple coding agents simultaneously in the same local repository directory leads to file conflicts and corrupted test states.Solution: Agents leverage git worktree add to create separate physical directories for different branches while sharing the underlying .git history.Workflow: Five agents can tackle five separate Kanban tickets in five isolated worktrees simultaneously.2. Open-Source Ecosystem & ToolsSeveral dominant frameworks and open-source packages manage this workflow:The-PR-Agent (GitHub): A community-driven AI tool that handles automated PR reviews, commit summaries, and code-base questioning directly inside GitHub.GitAgent: A git-native agent framework where you define multi-agent roles (maker, checker, auditor) inside an agent.yaml configuration file and manage them natively using gitagent commands.Claude Code & GitHub Copilot CLI: Developers use features like the /fleet command in Copilot CLI or plugins in Claude Code to orchestrate a cluster of sub-agents to tackle a codebase problem in parallel.?? Example: Step-by-Step Execution WorkflowTriage & Spec Definition: The Orchestrator Agent analyzes an input goal (e.g., "Add dark mode and fix the user auth timeout bug"), splits it into precise GitHub Issues, and outlines acceptance criteria.Parallel Coding: The framework spawns two parallel Coding Agents in isolated virtual environments or separate Git worktrees. Agent A works on the UI in feature/dark-mode while Agent B edits backend middleware in bugfix/auth-timeout.Automated PR Generation: Upon successful local compilation, each agent commits code following Conventional Commit formats and automatically generates a structured Pull Request back to the main repository.Agentic Code Review & Validation: A Reviewer Agent reads the PR git diff using a GitHub Webhook. It executes automated test suites (via pytest), checks formatting (ruff or black), evaluates security vulnerabilities, and comments directly on the PR code lines.Conflict Resolution & Merging: A Merge Agent runs dependency trees, establishes the optimal merge order to avoid regressions, automatically rebases between consecutive merges, and cleanly updates the project's production state.
