@@ -1,23 +1,76 @@
-# Multi-Agent Git PR Workflow
+# git_multi_agent_repo
 
-Template repository for coordinating multiple Claude Code sessions via Git branches and Pull Requests.
+A Python project built and maintained by multiple Claude Code sessions working in parallel via Git branches and Pull Requests.
 
-## Quick Start
+## Project Structure
 
-1. Open 2+ terminal tabs in this directory
-2. Run `claude` in each tab
-3. Tell Session A: "You are Session A — read CLAUDE.md and claim your Sprint 1 tasks"
-4. Tell Session B: "You are Session B — read CLAUDE.md and claim your Sprint 1 tasks"
-5. Watch them work in parallel, create PRs, and review each other's code
+```
+src/
+├── config/
+│   └── settings.py        # Settings dataclass, env var loading
+├── models/
+│   └── task.py             # Task/TaskStatus dataclasses, factory
+└── utils/
+    ├── string_helpers.py   # slugify, truncate, sanitize_html
+    └── date_helpers.py     # format_date, parse_date, date_diff_days
+tests/
+├── test_settings.py
+├── test_task_model.py
+├── test_string_helpers.py
+└── test_date_helpers.py
+```
 
-## Structure
+## Setup
 
-- `CLAUDE.md` — Instructions for Claude Code sessions (read first)
-- `docs/execution_plan/` — Sprint plans and task tracking
-- `sync_github.sh` — Push to GitHub with PAT from AWS SSM
-- `src/` — Source code
-- `tests/` — Test files
+```bash
+python3 -m pip install -r requirements.txt
+```
 
-## Applying to Other Repos
+## Usage
 
-Copy `CLAUDE.md`, `sync_github.sh`, and `docs/execution_plan/MULTI_AGENT_PR_EXECUTION_TEMPLATE.md` to any repo.
+```python
+from src.utils.string_helpers import slugify, truncate, sanitize_html
+from src.utils.date_helpers import format_date, parse_date, date_diff_days
+from src.config.settings import load_settings
+from src.models.task import create_task, TaskStatus
+
+# String helpers
+slugify("Hello World!")          # "hello-world"
+truncate("long text...", 8)      # "long..."
+sanitize_html("<b>bold</b>")     # "bold"
+
+# Date helpers
+from datetime import datetime
+format_date(datetime(2026, 8, 24))            # "2026-08-24"
+parse_date("2026-08-24")                       # datetime(2026, 8, 24)
+date_diff_days(datetime(2026, 8, 1), datetime(2026, 8, 24))  # 23
+
+# Configuration (reads APP_NAME, APP_VERSION, DEBUG, LOG_LEVEL from env)
+settings = load_settings()
+
+# Task model
+task = create_task("Fix bug", "Edge case in parser", assignee="Alice")
+task.status = TaskStatus.IN_PROGRESS
+```
+
+## Running Tests
+
+```bash
+python3 -m pytest tests/ -v
+```
+
+## Multi-Agent Workflow
+
+This repo uses a Git-based coordination protocol for parallel Claude Code sessions. See [`CLAUDE.md`](CLAUDE.md) for the full protocol. The key idea:
+
+- Each session works in its own **git worktree** (isolated checkout)
+- Sessions declare work in `ACTIVE_WORK.md` before branching
+- One PR per feature, cross-session review, squash-merge to main
+- Conflicts resolved by rebase — first merged wins
+
+To start a multi-agent session:
+
+1. Open 2+ terminals in this directory
+2. Run `claude` in each
+3. Tell each session its ID ("You are Session A / B")
+4. Each reads `CLAUDE.md` and follows the Tier 1 protocol
