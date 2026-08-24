@@ -20,6 +20,56 @@ Multiple Claude Code sessions run simultaneously on the same Cloud9 machine. Eac
 
 ---
 
+## CRITICAL: Git Worktrees Required for Parallel Sessions
+
+**Two sessions sharing the same working directory WILL cause branch collisions.** When Session A checks out a feature branch, Session B's `git checkout` switches the entire directory to a different branch — destroying Session A's working state.
+
+**Solution**: Each session MUST work in its own **git worktree**.
+
+### Setup (one-time per session)
+
+```bash
+# From the main repo directory
+REPO_DIR=/home/ec2-user/environment/my_projects/git_multi_agent_repo
+WORKTREE_BASE=/home/ec2-user/environment/my_projects/git_multi_agent_repo_worktrees
+
+# Create a worktree for each session
+git worktree add "$WORKTREE_BASE/session-a" -b session-a-workspace main
+git worktree add "$WORKTREE_BASE/session-b" -b session-b-workspace main
+```
+
+### How it works
+
+- Each worktree is an isolated directory with its own checked-out branch
+- All worktrees share the same `.git` database (commits, remotes, history)
+- Session A works in `$WORKTREE_BASE/session-a`, Session B in `$WORKTREE_BASE/session-b`
+- The main repo directory stays on `main` and is used for coordination tasks only (updating TASK_CLAIMS.md, etc.)
+
+### Per-task workflow in a worktree
+
+```bash
+cd $WORKTREE_BASE/session-a
+git fetch origin
+git checkout -b feature/T07-task-validator origin/main
+# ... do work, commit, push ...
+# When done, switch back:
+git checkout main
+```
+
+### Cleanup after sprint
+
+```bash
+# Remove worktrees when no longer needed
+git worktree remove "$WORKTREE_BASE/session-a"
+git worktree remove "$WORKTREE_BASE/session-b"
+# List remaining worktrees
+git worktree list
+```
+
+> **Lesson learned (Sprint 1)**: Without worktrees, Session A and Session B repeatedly overwrote each other's branches, causing commits to land on wrong branches and requiring multiple force-resets. Worktrees eliminated this entirely.
+
+---
+
 ## Session Start Checklist (MANDATORY)
 
 Before starting any work:
