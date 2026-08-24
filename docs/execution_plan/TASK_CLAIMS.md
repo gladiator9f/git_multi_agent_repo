@@ -8,11 +8,11 @@
 
 | Task | Description | Claimed By | Branch | PR # | Status |
 |------|-------------|-----------|--------|------|--------|
-| T01 | String helper functions | — | — | — | 🔴 Available |
+| T01 | String helper functions | Session A | feature/T01-string-helpers | — | 🟡 Claimed |
 | T02 | Date helper functions | — | — | — | 🔴 Available |
-| T03 | Configuration module | — | — | — | 🔴 Available |
+| T03 | Configuration module | Session A | feature/T03-config-settings | — | 🟡 Claimed |
 | T04 | Task data model | — | — | — | 🔴 Available |
-| T05 | String helper tests | — | — | — | 🔴 Available |
+| T05 | String helper tests | Session A | (bundled with T01) | — | 🟡 Claimed |
 | T06 | Date helper tests | — | — | — | 🔴 Available |
 
 ## Sprint 2 — Cross-Session Dependencies
