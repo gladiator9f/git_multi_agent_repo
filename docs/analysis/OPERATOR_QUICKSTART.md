@@ -18,7 +18,7 @@ Your fine-grained PAT needs push access to `git_multi_agent_repo`.
 5. Click **Regenerate token**
 6. If token value changed, update SSM:
    ```bash
-   aws ssm put-parameter --name "/orchestraprime/github/pat" --type SecureString --value "NEW_TOKEN_VALUE" --overwrite
+   aws ssm put-parameter --name "/orchestraprime/github/pat_multi_agent_repo" --type SecureString --value "NEW_TOKEN_VALUE" --overwrite
    ```
 
 ### 2. Push Initial Setup
@@ -31,7 +31,7 @@ cd /home/ec2-user/environment/my_projects/git_multi_agent_repo
 ### 3. Authenticate gh CLI
 
 ```bash
-export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat" --with-decryption --query "Parameter.Value" --output text)
+export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat_multi_agent_repo" --with-decryption --query "Parameter.Value" --output text)
 gh auth status
 # Should show: ✓ Logged in to github.com
 ```
@@ -67,7 +67,7 @@ You are Session A in a multi-agent PR workflow demo.
 Working directory: /home/ec2-user/environment/my_projects/git_multi_agent_repo
 
 IMPORTANT: Before creating any PR, set the GH_TOKEN env var:
-export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat" --with-decryption --query "Parameter.Value" --output text)
+export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat_multi_agent_repo" --with-decryption --query "Parameter.Value" --output text)
 
 Read CLAUDE.md, then read docs/execution_plan/SPRINT_01_SETUP_AND_DEMO.md.
 
@@ -94,7 +94,7 @@ You are Session B in a multi-agent PR workflow demo.
 Working directory: /home/ec2-user/environment/my_projects/git_multi_agent_repo
 
 IMPORTANT: Before creating any PR, set the GH_TOKEN env var:
-export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat" --with-decryption --query "Parameter.Value" --output text)
+export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat_multi_agent_repo" --with-decryption --query "Parameter.Value" --output text)
 
 Read CLAUDE.md, then read docs/execution_plan/SPRINT_01_SETUP_AND_DEMO.md.
 

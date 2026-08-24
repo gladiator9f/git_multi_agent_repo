@@ -198,14 +198,14 @@ Before the first sprint:
 
 1. **Git initialized** ✅ (done by setup script)
 2. **Remote configured** ✅ (done by setup script)
-3. **GitHub PAT in SSM**: Verify `aws ssm get-parameter --name "/orchestraprime/github/pat" --with-decryption` returns a valid token
+3. **GitHub PAT in SSM**: Verify `aws ssm get-parameter --name "/orchestraprime/github/pat_multi_agent_repo" --with-decryption` returns a valid token
 4. **Authenticate `gh` CLI** (OPERATOR TASK):
    ```bash
    # Option A: Interactive login
    gh auth login -h github.com
 
    # Option B: Use PAT from SSM
-   export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat" --with-decryption --query "Parameter.Value" --output text)
+   export GH_TOKEN=$(aws ssm get-parameter --name "/orchestraprime/github/pat_multi_agent_repo" --with-decryption --query "Parameter.Value" --output text)
    gh auth status
    ```
 5. **Initial push**: Run `./sync_github.sh push "initial setup"` to push scaffolding to GitHub

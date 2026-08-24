@@ -26,3 +26,5 @@ Thumbs.db
 *.swp
 *.swo
 *~
+pat_cred.txt
+**/pat_cred.txt

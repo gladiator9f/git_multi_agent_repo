@@ -22,10 +22,10 @@ if [ "$1" == "push" ] && [ -n "$2" ]; then
 fi
 
 # Retrieve PAT from SSM
-GITHUB_PAT=$(aws ssm get-parameter --name "/orchestraprime/github/pat" --with-decryption --query "Parameter.Value" --output text 2>/dev/null)
+GITHUB_PAT=$(aws ssm get-parameter --name "/orchestraprime/github/pat_multi_agent_repo" --with-decryption --query "Parameter.Value" --output text 2>/dev/null)
 if [ -z "$GITHUB_PAT" ]; then
     echo -e "${RED}ERROR: Failed to retrieve GitHub PAT from SSM Parameter Store.${NC}"
-    echo -e "${RED}Run: aws ssm put-parameter --name '/orchestraprime/github/pat' --type SecureString --value '<YOUR_PAT>' --overwrite${NC}"
+    echo -e "${RED}Run: aws ssm put-parameter --name '/orchestraprime/github/pat_multi_agent_repo' --type SecureString --value '<YOUR_PAT>' --overwrite${NC}"
     exit 1
 fi
 
