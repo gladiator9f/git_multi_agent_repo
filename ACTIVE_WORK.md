@@ -6,6 +6,6 @@ Live declaration of what each session is working on. Check this before starting 
 
 | Session | Branch | What I'm Doing | Key Files I'm Touching | Status |
 |---------|--------|---------------|----------------------|--------|
-| — | — | — | — | — |
+| A | feature/pyproject-and-makefile | Add pyproject.toml + Makefile | pyproject.toml, Makefile | 🟡 In Progress |
 
 <!-- Remove rows when PR is merged. This file should only show in-flight work. -->
