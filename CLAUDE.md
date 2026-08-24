@@ -75,19 +75,26 @@ git worktree list
 Before starting any work:
 
 1. Read this `CLAUDE.md`
-2. Read `docs/execution_plan/CURRENT_SPRINT.md` — the active sprint execution plan
-3. Sync with remote:
+2. **Find your sprint assignment**:
+   - Read `docs/execution_plan/SESSION_REGISTRY.md` — find your session's assigned sprint
+   - Read that sprint's execution plan (e.g., `SPRINT_02_CROSS_SESSION_COORDINATION.md`)
+   - If your operator prompt specifies a sprint, use that; otherwise fall back to `CURRENT_SPRINT.md`
+3. **Check for cross-sprint file collisions**:
+   - Read `docs/execution_plan/FILE_OWNERSHIP_MATRIX.md`
+   - If any file you plan to touch is also claimed by a task in another active sprint, follow the Cross-Sprint Conflict Protocol in that file
+4. Sync with remote:
    ```bash
    git fetch origin
    git checkout main
    git pull origin main
    ```
-4. Check what other sessions are working on:
+5. Check what other sessions are working on:
    ```bash
    git branch -r
    ```
-5. Read `docs/execution_plan/TASK_CLAIMS.md` — see which tasks are claimed
-6. **Claim your task**: Update `TASK_CLAIMS.md` on main with your session identifier, commit, and push before branching
+6. Read `docs/execution_plan/TASK_CLAIMS.md` — see which tasks are claimed
+7. **Claim your task**: Update `TASK_CLAIMS.md` on main with your session identifier, commit, and push before branching
+8. **Update registry**: Update your row in `SESSION_REGISTRY.md` with status `🟡 Active`
 
 ---
 
@@ -197,9 +204,25 @@ gh pr merge <pr-number> --squash --delete-branch
 | Channel | Purpose |
 |---------|---------|
 | `TASK_CLAIMS.md` on main | Who's working on what |
+| `SESSION_REGISTRY.md` on main | Which session is on which sprint |
+| `FILE_OWNERSHIP_MATRIX.md` | Global cross-sprint file collision map |
 | PR comments | Notes for the reviewing session |
 | Branch names | Scope visibility for other sessions |
-| `docs/execution_plan/CURRENT_SPRINT.md` | Task definitions and acceptance criteria |
+
+### Cross-Sprint Parallel Work
+
+Sessions can work on **different sprints simultaneously** (e.g., Session A on Sprint 2 while Session B on Sprint 3). This works because:
+
+- **Worktrees** isolate each session's branch regardless of sprint
+- **TASK_CLAIMS.md** spans all sprints in one file
+- **FILE_OWNERSHIP_MATRIX.md** provides a global view of which files are contested across all active sprints
+- **SESSION_REGISTRY.md** maps each session to its sprint so sessions know what each other is working on
+
+**Rules for cross-sprint work:**
+1. **Read-only imports are safe** — importing from a merged file owned by a completed sprint is fine
+2. **Write collisions require sequencing** — if your task modifies a file another sprint also modifies, first PR merged wins; second session rebases
+3. **Interface changes break downstream** — do not change the public API of merged code without updating all importers (check the dependency graph in `FILE_OWNERSHIP_MATRIX.md`)
+4. **Cross-sprint dependencies must be satisfied** — check the dependency flags in `FILE_OWNERSHIP_MATRIX.md` before starting
 
 ---
 
@@ -220,9 +243,13 @@ The script handles PAT retrieval from AWS SSM, remote auth, and push. For direct
 ```
 docs/execution_plan/
 ├── MULTI_AGENT_PR_EXECUTION_TEMPLATE.md   — Reusable sprint template
-├── CURRENT_SPRINT.md                       — Active sprint (copy of latest)
-├── TASK_CLAIMS.md                          — Live task ownership tracker
+├── SESSION_REGISTRY.md                     — Session → sprint mapping (supports cross-sprint parallelism)
+├── FILE_OWNERSHIP_MATRIX.md               — Global cross-sprint file collision map
+├── CURRENT_SPRINT.md                       — Default sprint (fallback when no registry entry)
+├── TASK_CLAIMS.md                          — Live task ownership tracker (all sprints)
 ├── SPRINT_01_SETUP_AND_DEMO.md            — First sprint
+├── SPRINT_02_CROSS_SESSION_COORDINATION.md — Second sprint
+├── SPRINT_03_REFACTOR_AND_RELEASE.md      — Third sprint
 └── completed/                              — Archived sprints
 ```
 
@@ -233,7 +260,7 @@ docs/execution_plan/
 | # | Task | When | How |
 |---|------|------|-----|
 | **O1** | Start Claude Code sessions | Sprint start | Open 2+ terminal tabs, `cd /home/ec2-user/environment/my_projects/git_multi_agent_repo`, run `claude` in each |
-| **O2** | Assign agent slots | Sprint start | Tell each session "You are Session A" or "You are Session B" — they'll claim tasks accordingly |
+| **O2** | Assign agent slots + sprint | Sprint start | Tell each session its ID AND sprint: "You are Session A on Sprint 2" — sessions can be on different sprints |
 | **O3** | Authenticate `gh` CLI (one-time) | Pre-setup | `gh auth login` with PAT from SSM, or set `GH_TOKEN` env var |
 | **O4** | Review/merge PRs (optional) | During sprint | Sessions can review each other's PRs, or operator does it via GitHub web UI |
 | **O5** | Resolve conflicts (if any) | As needed | If two PRs touch overlapping files, decide merge order |
@@ -289,7 +316,8 @@ Once this workflow is validated here:
 2. **Push**: Branch pushed to origin
 3. **PR**: PR created (if task is complete)
 4. **Claims**: `TASK_CLAIMS.md` updated with your status
-5. **No dangling branches**: If task is abandoned, delete the branch
+5. **Registry**: `SESSION_REGISTRY.md` updated (status → `✅ Complete` if all tasks done)
+6. **No dangling branches**: If task is abandoned, delete the branch
 
 ---
 
